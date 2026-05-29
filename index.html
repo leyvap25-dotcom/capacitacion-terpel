@@ -96,6 +96,14 @@
             border-top-color: #f2c811;
         }
 
+        .card.logistica {
+            border-top-color: #e30613;
+        }
+
+        .card.talent {
+            border-top-color: #107c41;
+        }
+
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -471,42 +479,60 @@
 
         <section id="lista-capacidades">
             <h2>7. Guía de Superpoderes: ¿Qué puedes hacer con esta herramienta?</h2>
-            <p>Para cerrar la capacitación con broche de oro, aquí tienes el desglose detallado y técnico de las habilidades del ecosistema de IA. Úsalas para inspirarte y empezar a delegar tus tareas más pesadas hoy mismo:</p>
+            <p>Para cerrar la capacitación con broche de oro, aquí tienes el desglose técnico y completo de los **6 pilares operativos**. Úsalos como mapa de ruta para transformar tus flujos de trabajo hoy mismo:</p>
             
             <div class="grid">
                 <div class="card">
                     <h4>📊 Gestión de Datos Avanzada en Excel</h4>
                     <ul>
-                        <li><strong>Código VBA a la medida:</strong> Pídele que programe macros desde cero para consolidar 50 libros de Excel de diferentes estaciones de servicio en una sola pestaña máster sin errores humanos.</li>
-                        <li><strong>Traductor de lógica a fórmulas:</strong> Describe tu problema en español común (<em>"Quiero que si la celda A es mayor que el inventario mínimo pero menor que el stock crítico, me traiga una alerta"</em>) y Gemini te devolverá la estructura exacta de `SI.CONJUNTO` o `BUSCARX`.</li>
-                        <li><strong>Limpieza de bases de datos corruptas:</strong> Copia filas con formatos inconsistentes y pídele que separe nombres, fechas de facturación y códigos de terminales logísticas en columnas limpias.</li>
+                        <li><strong>Código VBA a la medida:</strong> Programa macros automáticas para consolidar libros de Excel dispersos de múltiples EDS en una sola pestaña máster sin errores de digitación.</li>
+                        <li><strong>Traductor de fórmulas complejas:</strong> Convierte descripciones operativas lógicas en código exacto de fórmulas anidadas como `BUSCARX`, `SI.CONJUNTO` o `SUMAPRODUCTO`.</li>
+                        <li><strong>Limpieza y minería de texto:</strong> Pídele que limpie bases de datos corruptas separando nombres de transportadores, fechas de cargue y códigos de estaciones en columnas organizadas.</li>
                     </ul>
                 </div>
 
                 <div class="card powerbi">
-                    <h4>📈 Modelado e Inteligencia de Datos en Power BI</h4>
+                    <h4>📈 Modelado e Inteligencia en Power BI</h4>
                     <ul>
-                        <li><strong>Creación de Métricas DAX Complejas:</strong> Automatiza el análisis temporal. Pídele que escribe la métrica para comparar las ventas actuales de galones frente al mismo periodo del año anterior (`SAMEPERIODLASTYEAR`) aplicando filtros por tipo de combustible de manera instantánea.</li>
-                        <li><strong>Optimización de código M (Power Query):</strong> Si tus consultas tardan siglos en cargar data desde SharePoint o SQL, pega el código en Gemini para que reduzca pasos duplicados y acelere la actualización de tus tableros.</li>
-                        <li><strong>Documentación y Auditoría Express:</strong> Copia el script de tu modelo de datos y deja que Gemini redacte de forma automatizada el glosario técnico y el diccionario de variables para presentarlo a la dirección de Terpel.</li>
+                        <li><strong>Creación de Métricas DAX:</strong> Redacta la estructura de medidas temporales (`SAMEPERIODLASTYEAR`, `TOTALYTD`) para evaluar la variación de ventas de galones de combustible entre periodos.</li>
+                        <li><strong>Optimización de código M (Power Query):</strong> Pega consultas lentas para eliminar pasos redundantes en la importación de datos desde redes compartidas o SharePoint.</li>
+                        <li><strong>Documentación automatizada:</strong> Procesa el script de tus tablas para generar diccionarios de variables técnicos listos para reportar a la dirección.</li>
+                    </ul>
+                </div>
+
+                <div class="card logistica">
+                    <h4>🚚 Optimización Logística y Suministro</h4>
+                    <ul>
+                        <li><strong>Planificación de rutas de despacho:</strong> Cruza datos de tiempos de cargue en plantas y distancias a las EDS para estructurar secuencias optimizadas de entrega mediante texto predictivo.</li>
+                        <li><strong>Control de mermas e inventarios:</strong> Diseña alertas analíticas comparando los despachos registrados en planta contra las lecturas físicas de los tanques de combustible.</li>
+                        <li><strong>Simulación de escenarios de tráfico:</strong> Evalúa el impacto de desvíos o contingencias en las vías principales, estimando tiempos de entrega modificados y ventanas de atención seguras.</li>
                     </ul>
                 </div>
 
                 <div class="card">
-                    <h4>✉️ Redacción y Flujos Corporativos (Word/Outlook)</h4>
+                    <h4>✉️ Redacción y Comunicaciones (Word/Outlook)</h4>
                     <ul>
-                        <li><strong>Ingeniería de correos ejecutivos:</strong> Convierte notas rápidas de una auditoría de campo en una plantilla formal para enviar por Outlook a los administradores de las EDS, manteniendo una comunicación asertiva y clara.</li>
-                        <li><strong>Sintetizador de hilos masivos:</strong> ¿Regresaste de vacaciones y tienes un hilo con 40 correos en Outlook sobre un incidente logístico? Cópialos todos en Gemini y pídele: <em>"Dame una cronología de qué pasó, quién tiene las tareas pendientes y cuál es el estado actual"</em>.</li>
-                        <li><strong>Estructuración de Manuales en Word:</strong> Genera índices completos, esquemas de procedimientos operativos y borradores de políticas de seguridad en segundos alineados a tu tono de marca.</li>
+                        <li><strong>Ingeniería de correos ejecutivos:</strong> Transforma apuntes rápidos de auditoría de campo en notificaciones formales y asertivas de Outlook para los operadores de las estaciones.</li>
+                        <li><strong>Sintetizador de hilos masivos:</strong> Copia conversaciones kilométricas con proveedores y genera resúmenes con acuerdos, compromisos y fechas límite precisas.</li>
+                        <li><strong>Estructuración de Manuales en Word:</strong> Genera guías operativas paso a paso, índices estructurados y plantillas comerciales alineadas al tono institucional de Terpel.</li>
                     </ul>
                 </div>
 
-                <div class="card" style="border-top-color: #7015a9;">
+                <div class="card talent">
+                    <h4>🌱 Gestión Humana, Salud y Seguridad (SST)</h4>
+                    <ul>
+                        <li><strong>Simulacros y Planes de Emergencia:</strong> Diseña guiones de simulación de derrames o contingencias de seguridad en plantas basándose en los estándares normativos vigentes.</li>
+                        <li><strong>Estructuración de capacitaciones en SST:</strong> Genera dinámicas grupales, trivias de repaso y materiales de inducción sobre el manejo seguro de hidrocarburos.</li>
+                        <li><strong>Automatización de comunicados internos:</strong> Redacta convocatorias, campañas de bienestar o respuestas frecuentes de nómina con un lenguaje empático y profesional.</li>
+                    </ul>
+                </div>
+
+                <div class="card notebook">
                     <h4>🧠 Investigación Blindada con NotebookLM</h4>
                     <ul>
-                        <li><strong>Auditoría de Normativas Técnicas:</strong> Sube la regulación de hidrocarburos nacional y hazle preguntas específicas de cumplimiento normativo. La IA te responderá usando estrictamente el documento y te marcará la página exacta para evitar multas.</li>
-                        <li><strong>Capacitación Veloz de Personal:</strong> Sube los manuales de inducción y deja que la herramienta cree cuestionarios de práctica automáticos o resúmenes ejecutivos interactivos para los nuevos integrantes del equipo.</li>
-                        <li><strong>Asistente Virtual de SharePoint:</strong> Descarga carpetas masivas de proyectos históricos archivados en tus redes internas, unifícalas en una libreta de NotebookLM y haz análisis cruzados de lecciones aprendidas en proyectos pasados.</li>
+                        <li><strong>Auditoría de Políticas de Calidad:</strong> Sube los manuales de control técnico y haz preguntas analíticas con la certeza de obtener respuestas 100% verídicas y amarradas al documento original.</li>
+                        <li><strong>Rastreo normativo interactivo:</strong> Inspecciona reglamentaciones legales del sector hidrocarburos y valida el cumplimiento de tus procesos internos haciendo clic en sus citas y páginas exactas.</li>
+                        <li><strong>Asistente virtual de OneDrive:</strong> Centraliza reportes históricos anuales de la operación de Terpel para extraer tendencias organizacionales en segundos.</li>
                     </ul>
                 </div>
             </div>
