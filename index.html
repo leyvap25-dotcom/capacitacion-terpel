@@ -92,6 +92,10 @@
             border-top-color: #7015a9;
         }
 
+        .card.powerbi {
+            border-top-color: #f2c811;
+        }
+
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -118,7 +122,7 @@
             background: linear-gradient(135deg, #111, #222);
             color: white;
             padding: 30px 10px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: bold;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
             letter-spacing: 1px;
@@ -265,7 +269,7 @@
             <p>Al trabajar en el sector energético, la confidencialidad de los datos logísticos, comerciales y financieros es crítica. La versión **Enterprise** de Gemini permite usar la inteligencia artificial con total tranquilidad dentro de la organización:</p>
             <ul>
                 <li><strong>Protección de Datos Institucionales:</strong> Todo documento, reporte de ventas o estrategia que subas a Gemini se procesa de forma aislada. Google garantiza por contrato que **nada de esta información se usará para entrenar modelos públicos**.</li>
-                <li><strong>Adiós a las fugas de información:</strong> Tu equipo puede analizar datos internos sin el riesgo de que información sensible de Terpel termine expuesta en internet.</li>
+                <li><strong>Adiós a las fugas de información:</strong> Tu equipo puede analizar datos internos sin el riesgo de que información sensible de Terpel termine expuesta in internet.</li>
             </ul>
         </section>
 
@@ -382,7 +386,7 @@
                     <p>6. ¿Para qué sirve la función de "Citas" en las respuestas de NotebookLM?</p>
                     <div class="options">
                         <label><input type="radio" name="p6" value="incorrecto"> Para agendar reuniones directamente en Microsoft Teams.</label>
-                        <label><input type="radio" name="p6" value="correcto"> Para verificar el párrafo y la página exacta del documento original de donde la IA extrajo la respuesta.</label>
+                        <label><input type="radio" name="p6" value="correcto"> Para verificar el párrafo y la página exacta del documento original de donde la IA extraxo la respuesta.</label>
                     </div>
                 </div>
 
@@ -403,10 +407,28 @@
                 <li><strong>Gems en Servicio al Cliente (EDS):</strong> Agentes con el tono de voz exacto de Terpel que transforman quejas o correos de Outlook rudos en respuestas institucionales impecables y soluciones estructuradas.</li>
             </ul>
 
-            <div class="step-box" style="margin-bottom: 25px;">
-                <h4>Ver casos de éxito reales de Agentes Empresariales:</h4>
-                <p>Para inspirarte y ver cómo otros profesionales configuran agentes avanzados en el sector corporativo, revisa estos reportajes e investigaciones:</p>
-                <a href="https://www.youtube.com/results?search_query=google+gemini+gems+use+cases+for+business" target="_blank" class="video-btn" style="background-color: #333;">Ver Casos de Uso en YouTube</a>
+            <h3 style="color: var(--terpel-red);">Ejemplos en Video: Agentes de IA en Acción en el Mundo Real</h3>
+            <p>Mira cómo otros profesionales e industrias configuran y despliegan agentes autónomos en sus flujos operativos corporativos:</p>
+            
+            <div class="video-grid" style="margin-bottom: 30px;">
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background: #2b3a42;">Gems Ops</div>
+                    <h4>Agentes en Operaciones</h4>
+                    <p>Casos prácticos de automatización de logística y flujos de revisión de datos operativos.</p>
+                    <a href="https://www.youtube.com/results?search_query=ai+agents+for+operations+use+cases" target="_blank" class="video-btn">Ver Ejemplos</a>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background: #4f5b66;">Gems Finance</div>
+                    <h4>Agentes en Finanzas</h4>
+                    <p>Ejemplos de analistas utilizando agentes preconfigurados para auditar reportes financieros masivos.</p>
+                    <a href="https://www.youtube.com/results?search_query=ai+agents+for+financial+analysis" target="_blank" class="video-btn">Ver Ejemplos</a>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background: #343d46;">Gems Support</div>
+                    <h4>Agentes en Soporte B2B</h4>
+                    <p>Cómo grandes corporativos entrenan agentes con sus políticas de marca para automatizar correos.</p>
+                    <a href="https://www.youtube.com/results?search_query=enterprise+ai+agents+customer+support" target="_blank" class="video-btn">Ver Ejemplos</a>
+                </div>
             </div>
 
             <div class="step-box">
@@ -458,6 +480,14 @@
                         <li>Generar macros y códigos de VBA listos para ejecutar en libros contables.</li>
                         <li>Traducir explicaciones lógicas a fórmulas anidadas complejas (`BUSCARV`, `SI.CONJUNTO`).</li>
                         <li>Limpiar bases de datos separando nombres, fechas y códigos de estaciones en columnas limpias.</li>
+                    </ul>
+                </div>
+                <div class="card powerbi">
+                    <h4>📊 Automatización en Power BI</h4>
+                    <ul>
+                        <li><strong>Generación de código DAX:</strong> Pídele a Gemini que redacte la métrica exacta para calcular el acumulado de ventas año a año de combustible sin romperte la cabeza.</li>
+                        <li><strong>Scripts en M (Power Query):</strong> Pega tus errores de conexión de datos en Gemini y pídele que optimice el código M para limpiar la data que traes desde SharePoint automáticamente.</li>
+                        <li><strong>Documentación de Modelos:</strong> Sube tus estructuras de datos y Gemini redactará el diccionario de variables de tus tableros de control de Power BI en un clic.</li>
                     </ul>
                 </div>
                 <div class="card">
