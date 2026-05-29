@@ -68,6 +68,12 @@
             padding-bottom: 12px;
         }
 
+        h3 {
+            color: var(--microsoft-blue);
+            font-size: 1.3rem;
+            margin-top: 25px;
+        }
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -142,6 +148,15 @@
             margin-top: 20px;
         }
 
+        .prompt-template {
+            background: #eef4fa;
+            border-left: 5px solid var(--microsoft-blue);
+            padding: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
         ul, ol {
             padding-left: 22px;
         }
@@ -151,7 +166,7 @@
             font-size: 1.05rem;
         }
 
-        .quiz-question {
+        .quiz-question, .taller-field {
             margin-bottom: 25px;
             padding: 20px;
             background: var(--bg-light);
@@ -159,9 +174,21 @@
             border: 1px solid var(--border);
         }
 
-        .quiz-question p {
+        .quiz-question p, .taller-field label {
             font-weight: 700;
             margin-top: 0;
+            display: block;
+        }
+
+        .taller-field input, .taller-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 8px;
+            font-family: inherit;
+            font-size: 1rem;
         }
 
         .options label {
@@ -198,11 +225,20 @@
             width: 100%;
             box-shadow: 0 4px 10px rgba(227,6,19,0.2);
             transition: all 0.3s;
+            margin-bottom: 15px;
         }
 
         .submit-btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 6px 15px rgba(227,6,19,0.3);
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #28a745, #1e7e34);
+            color: white;
+        }
+        .download-btn:hover {
+            box-shadow: 0 6px 15px rgba(40,167,69,0.3);
         }
 
         #result {
@@ -355,6 +391,49 @@
 
             <div id="result"></div>
         </section>
+
+        <section id="taller-practico">
+            <h2>6. Taller Práctico: Diseña tu propio Agente (Gem) para Terpel</h2>
+            <p>La mejor forma de aprender es aplicando la IA a tu trabajo real. Piensa en esa tarea repetitiva o compleja que haces en tu día a día (ej. revisar informes de ventas, redactar respuestas de servicio al cliente, auditar inventarios de combustible o planificar agendas en Teams).</p>
+            
+            <div class="step-box">
+                <h4>Estructura sugerida para tus instrucciones (System Prompt):</h4>
+                <div class="prompt-template">
+                    Actúa como un [ROL - Ej: Analista Logístico de Combustibles]. <br>
+                    Tu objetivo principal es [TAREA PRINCIPAL - Ej: Revisar reportes de Excel de las EDS]. <br>
+                    Sigue estrictamente estas reglas: <br>
+                    1. Revisa [REGLA 1]<br>
+                    2. Entrega el resultado en un formato de [FORMATO - Ej: Lista con viñetas en Outlook].
+                </div>
+            </div>
+
+            <p style="margin-top: 25px;"><strong>Completa el siguiente formulario para estructurar tu propuesta de Agente y descárgala para presentarla a tu supervisor:</strong></p>
+
+            <form id="tallerForm">
+                <div class="taller-field">
+                    <label for="nombreEmpleado">Nombre del Colaborador / Estudiante:</label>
+                    <input type="text" id="nombreEmpleado" placeholder="Ej: Juan Pérez - Área Comercial">
+                </div>
+
+                <div class="taller-field">
+                    <label for="nombreGem">1. ¿Qué nombre le pondrías a tu Gem (Agente de IA)?</label>
+                    <input type="text" id="nombreGem" placeholder="Ej: Optimizador de Rutas EDS / Copiloto de Reportes Financieros">
+                </div>
+
+                <div class="taller-field">
+                    <label for="objetivoGem">2. ¿Qué problema o tarea real de tu puesto va a automatizar?</label>
+                    <textarea id="objetivoGem" rows="3" placeholder="Ej: Me ayudará a analizar el consolidado de ventas mensual que descargo de OneDrive para encontrar variaciones raras rápido."></textarea>
+                </div>
+
+                <div class="taller-field">
+                    <label for="instruccionesGem">3. Escribe las instrucciones del sistema (System Prompt) que le darás a tu agente:</label>
+                    <textarea id="instruccionesGem" rows="5" placeholder="Sigue el modelo de la caja amarilla de arriba..."></textarea>
+                </div>
+
+                <button type="button" class="submit-btn download-btn" onclick="descargarReporteTaller()">Descargar Reporte del Taller (.txt)</button>
+            </form>
+        </section>
+
     </div>
 
     <script>
@@ -392,7 +471,7 @@
                 resultDiv.style.backgroundColor = '#e6f4ea';
                 resultDiv.style.color = '#137333';
                 resultDiv.style.border = '1px solid #ceead6';
-                resultDiv.innerHTML = `🎉 <strong>¡Excelente! ¡Capacitación Aprobada (${puntos}/6)!</strong><br>Dominas perfectamente los pilares avanzados de Gemini Enterprise, la creación de Gems y la auditoría segura con NotebookLM en Terpel.`;
+                resultDiv.innerHTML = `🎉 <strong>¡Excelente! ¡Capacitación Aprobada (${puntos}/6)!</strong><br>Dominas perfectamente los pilares avanzados de Gemini Enterprise, la creación de Gems y la auditoría segura con NotebookLM en Terpel. Continúa abajo con el ejercicio práctico.`;
             } else {
                 resultDiv.style.backgroundColor = '#fef7e0';
                 resultDiv.style.color = '#b06000';
@@ -401,6 +480,37 @@
             }
             
             resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function descargarReporteTaller() {
+            const nombre = document.getElementById('nombreEmpleado').value;
+            const nombreGem = document.getElementById('nombreGem').value;
+            const objetivo = document.getElementById('objetivoGem').value;
+            const instrucciones = document.getElementById('instruccionesGem').value;
+
+            if (!nombre || !nombreGem || !objetivo || !instrucciones) {
+                alert('⚠️ Por favor completa todos los campos del taller práctico antes de descargar el reporte.');
+                return;
+            }
+
+            const textoReporte = `==================================================\n` +
+                                 `REPORTE DE PROPUESTA: AGENTE DE IA (GEMS) - TERPEL\n` +
+                                 `==================================================\n\n` +
+                                 `Colaborador: ${nombre}\n` +
+                                 `Fecha: ${new Date().toLocaleDateString()}\n\n` +
+                                 `1. Nombre del Gem Propuesto:\n${nombreGem}\n\n` +
+                                 `2. Objetivo Operativo (Qué automatiza):\n${objetivo}\n\n` +
+                                 `3. Instrucciones de Configuración (System Prompt):\n${instrucciones}\n\n` +
+                                 `==================================================\n` +
+                                 `Documento generado automáticamente desde el Hub de IA.`;
+
+            const blob = new Blob([textoReporte], { type: 'text/plain;charset=utf-8' });
+            const elementoLink = document.createElement('a');
+            elementoLink.href = URL.createObjectURL(blob);
+            elementoLink.download = `Taller_Gem_Terpel_${nombre.replace(/[^a-z0-8]/gi, '_')}.txt`;
+            document.body.appendChild(elementoLink);
+            elementoLink.click();
+            document.body.removeChild(elementoLink);
         }
     </script>
 </body>
