@@ -393,21 +393,34 @@
         </section>
 
         <section id="taller-practico">
-            <h2>6. Taller Práctico: Diseña tu propio Agente (Gem) para Terpel</h2>
-            <p>La mejor forma de aprender es aplicando la IA a tu trabajo real. Piensa en esa tarea repetitiva o compleja que haces en tu día a día (ej. revisar informes de ventas, redactar respuestas de servicio al cliente, auditar inventarios de combustible o planificar agendas en Teams).</p>
+            <h2>6. ¿Para qué sirve crear Agentes de IA (Gems) en la Empresa?</h2>
+            <p>Un <strong>Agente o "Gem"</strong> es como contratar a un asistente experto y entrenarlo para que haga una sola tarea a la perfección de forma permanente. En lugar de explicarle a la IA el contexto de Terpel y las reglas del negocio cada mañana, dejas el agente preconfigurado.</p>
             
+            <h3>Ejemplos de la vida real con Gemini Enterprise:</h3>
+            <ul>
+                <li><strong>Gems en Operaciones y Logística:</strong> Agentes entrenados con las rutas y capacidades de las plantas de combustible para revisar hojas de cálculo de Microsoft Excel y detectar instantáneamente retrasos o anomalías en los despachos.</li>
+                <li><strong>Gems en Legal y Contratación:</strong> Agentes configurados con la normativa fiscal de hidrocarburos. El usuario arrastra un contrato en Word y el agente subraya las cláusulas de riesgo en segundos.</li>
+                <li><strong>Gems en Servicio al Cliente (EDS):</strong> Agentes con el tono de voz exacto de Terpel que transforman quejas o correos de Outlook rudos en respuestas institucionales impecables y soluciones estructuradas.</li>
+            </ul>
+
+            <div class="step-box" style="margin-bottom: 25px;">
+                <h4>Ver casos de éxito reales de Agentes Empresariales:</h4>
+                <p>Para inspirarte y ver cómo otros profesionales configuran agentes avanzados en el sector corporativo, revisa estos reportajes e investigaciones:</p>
+                <a href="https://www.youtube.com/results?search_query=google+gemini+gems+use+cases+for+business" target="_blank" class="video-btn" style="background-color: #333;">Ver Casos de Uso en YouTube</a>
+            </div>
+
             <div class="step-box">
                 <h4>Estructura sugerida para tus instrucciones (System Prompt):</h4>
                 <div class="prompt-template">
-                    Actúa como un [ROL - Ej: Analista Logístico de Combustibles]. <br>
-                    Tu objetivo principal es [TAREA PRINCIPAL - Ej: Revisar reportes de Excel de las EDS]. <br>
-                    Sigue estrictamente estas reglas: <br>
+                    Actúa como un [ROL - Ej: Analista de Estaciones de Servicio]. <br>
+                    Tu objetivo es [TAREA PRINCIPAL - Ej: Auditar reportes de ventas]. <br>
+                    Sigue estas reglas corporativas: <br>
                     1. Revisa [REGLA 1]<br>
-                    2. Entrega el resultado en un formato de [FORMATO - Ej: Lista con viñetas en Outlook].
+                    2. Entrega el resultado en un formato de [FORMATO - Ej: Correo para Outlook].
                 </div>
             </div>
 
-            <p style="margin-top: 25px;"><strong>Completa el siguiente formulario para estructurar tu propuesta de Agente y descárgala para presentarla a tu supervisor:</strong></p>
+            <p style="margin-top: 25px;"><strong>Taller: Completa el formulario para estructurar tu propuesta de Agente y descárgala:</strong></p>
 
             <form id="tallerForm">
                 <div class="taller-field">
@@ -417,12 +430,12 @@
 
                 <div class="taller-field">
                     <label for="nombreGem">1. ¿Qué nombre le pondrías a tu Gem (Agente de IA)?</label>
-                    <input type="text" id="nombreGem" placeholder="Ej: Optimizador de Rutas EDS / Copiloto de Reportes Financieros">
+                    <input type="text" id="nombreGem" placeholder="Ej: Auditor de Inventarios EDS / Copiloto de Cumplimiento">
                 </div>
 
                 <div class="taller-field">
                     <label for="objetivoGem">2. ¿Qué problema o tarea real de tu puesto va a automatizar?</label>
-                    <textarea id="objetivoGem" rows="3" placeholder="Ej: Me ayudará a analizar el consolidado de ventas mensual que descargo de OneDrive para encontrar variaciones raras rápido."></textarea>
+                    <textarea id="objetivoGem" rows="3" placeholder="Ej: Analizar las planillas de Microsoft Excel que descargo de SharePoint para cruzar las ventas diarias contra las existencias físicas de combustible."></textarea>
                 </div>
 
                 <div class="taller-field">
@@ -432,6 +445,38 @@
 
                 <button type="button" class="submit-btn download-btn" onclick="descargarReporteTaller()">Descargar Reporte del Taller (.txt)</button>
             </form>
+        </section>
+
+        <section id="lista-capacidades">
+            <h2>7. Guía de Superpoderes: ¿Qué puedes hacer con esta herramienta?</h2>
+            <p>Para cerrar la capacitación, aquí tienes el listado definitivo de habilidades y tareas concretas que el equipo de Terpel puede empezar a delegar en la herramienta hoy mismo:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h4>Gestión de Datos y Excel</h4>
+                    <ul>
+                        <li>Generar macros y códigos de VBA listos para ejecutar en libros contables.</li>
+                        <li>Traducir explicaciones lógicas a fórmulas anidadas complejas (`BUSCARV`, `SI.CONJUNTO`).</li>
+                        <li>Limpiar bases de datos separando nombres, fechas y códigos de estaciones en columnas limpias.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>Redacción e Informes</h4>
+                    <ul>
+                        <li>Redactar borradores de contratos, actas operativas o minutas técnicas en Microsoft Word.</li>
+                        <li>Cambiar el tono de un correo de Outlook para hacerlo más persuasivo, comercial o formal.</li>
+                        <li>Sintetizar hilos kilométricos de correos copiados en resúmenes ejecutivos de 3 puntos.</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-top-color: #7015a9;">
+                    <h4>Auditoría con NotebookLM</h4>
+                    <ul>
+                        <li>Subir manuales de seguridad industrial y hacerles preguntas sin que la IA invente datos.</li>
+                        <li>Cruzar regulaciones de hidrocarburos extensas contra procedimientos internos de la empresa.</li>
+                        <li>Generar guías de estudio rápidas y glosarios técnicos basados en archivos de OneDrive.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
     </div>
@@ -502,7 +547,7 @@
                                  `2. Objetivo Operativo (Qué automatiza):\n${objetivo}\n\n` +
                                  `3. Instrucciones de Configuración (System Prompt):\n${instrucciones}\n\n` +
                                  `==================================================\n` +
-                                 `Documento generado automáticamente desde el Hub de IA.`;
+                                 `Documento generado automáticamente desde el Hub de IA Terpel.`;
 
             const blob = new Blob([textoReporte], { type: 'text/plain;charset=utf-8' });
             const elementoLink = document.createElement('a');
